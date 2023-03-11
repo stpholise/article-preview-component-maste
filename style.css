@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body {
+    background-color: #fff;
+    padding: 1rem;
+    width: 100vw;
+    height: 100vh;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 60%;
+    height: 60vh;
+    min-height: fit-content;
+    margin: 10rem auto;
+    border: 1px solid var(--Light-Grayish-Blue);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+}
+
+.lt {
+    background: url('./images/drawers.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem 0 0 1rem;
+    height: inherit;
+    width: 100%;
+}
+
+.rt {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.rt-heading {
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+
+.m-text {
+    margin: 1rem 0 0;
+    font-size: 1rem;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+
+}
+
+.profile .msg {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.profile .msg .date {
+    display: block;
+}
+
+.msg .profile-img {
+    border-radius: 50%;
+    width: 3rem;
+}
+
+.profile .name {
+    font-size: 1.4rem;
+
+}
+
+.share {
+    z-index: 300;
+}
+
+.social-icons {
+    width: 15rem;
+    height: 3.5rem;
+    box-shadow: 3px 3px 10px var(--Grayish-Blue);
+    background-color: var(--Very-Dark-Grayish-Blue);
+    position: absolute;
+    z-index: 200;
+    top: -4.2rem;
+    right: -7rem;
+    border-radius: 0.5rem;
+    color: var(--Light-Grayish-Blue);
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.social-icons::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 1rem solid var(--Very-Dark-Grayish-Blue);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    z-index: 200;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: -1rem;
+    transform: translateX(50%);
+    transform: translateX(-50%);
+
+}
+
+@media(max-width:900px) {
+
+    .container {
+        width: 95%;
+        height: 120vh;
+        min-height: fit-content;
+        margin: 2rem auto;
+        border-radius: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .lt {
+        background: url('./images/drawers.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 1rem 1rem 0 0;
+        height: 400px;
+        width: 100%;
+    }
+
+    .rt {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    .rt-top {
+        padding: 1rem;
+        margin: 2rem 0;
+    }
+
+    .rt-headig {
+        font-size: 1.2rem;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        min-height: fit-content;
+        height: 6rem;
+        margin: 0;
+        padding: 1rem;
+
+    }
+
+    .share {
+        z-index: 300;
+        margin: 0 0 0 0.5rem;
+        background-color: #ccc;
+        padding: 0.8rem;
+        border-radius: 50%;
+    }
+
+    .social-icons {
+        width: 100%;
+        height: 100%;
+        box-shadow: 3px 3px 10px var(--Grayish-Blue);
+        background-color: var(--Very-Dark-Grayish-Blue);
+        position: absolute;
+        z-index: 200;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0 0 0.5rem 0.5rem;
+        color: #fff;
+        display: none;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 2rem 1rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .social-icons a {
+        height: 50%;
+    }
+
+    .social-icons a img {
+        height: 100%;
+
+    }
+
+
+    .social-icons::after {
+
+        display: none;
+    }
+
+
+}
+
+.show {
+    display: flex;
+}
